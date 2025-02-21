@@ -115,13 +115,19 @@ const display=(show)=>{
 
 }
 
-const likedPetsDisplay = (image) => {
-  console.log(image);
+const likedPetsDisplay = (petImage) => {
+  console.log(petImage);
   
   const d2=document.getElementById('get-images');
   const d1=document.createElement('div');
+  d1.classList=""
+ 
   d1.innerHTML=`
-  <img class="h-full rounded-lg w-full object-cover" src=${image};
+  
+
+  <div class="p-3 border flex  justify-center items-center">
+  <img class="h-full rounded-lg w-full  object-cover" src=${petImage} alt="Liked Pet Image">
+  </div>
   
   `
   d2.appendChild(d1);
